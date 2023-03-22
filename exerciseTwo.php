@@ -280,3 +280,182 @@ while ($i >= 1) {
     $i--;
 };
 echo $str;
+echo "\n";
+$i = '1';
+$str = '-';
+while ($i < 10) {
+    $str = $str . ($i . '-');
+    $i++;
+};
+echo $str;
+echo "\n";
+$i = 'x';
+$a = 1;
+while ($a <= 20) {
+    echo $i, "\n";
+    $i = $i . 'x';
+    $a++;
+};
+echo "\n";
+$i = 'xx';
+$a = 1;
+while ($a <= 5) {
+    echo $i, "\n";
+    $i = $i . 'xx';
+    $a++;
+};
+echo "\n";
+
+echo "\n";
+//цикл for
+echo "for";
+echo "\n";
+for ($i = 1; $i <= 100; $i++) {
+    echo $i, "\n";
+};
+echo "\n";
+for ($i = 11; $i <= 33; $i++) {
+    echo $i, "\n";
+};
+echo "\n";
+for ($i = 2; $i <= 100; $i += 2) {
+    echo $i, "\n";
+};
+echo "\n";
+for ($i = 1, $sum = 0; $i <= 100; $i++) {
+    $sum += $i;
+};
+echo $sum;
+echo "\n";
+for ($i = 1, $str = ''; $i < 10; $i++) {
+    $str .= $i;
+};
+echo $str, "\n";
+echo "\n";
+for ($i = 9, $str = ''; $i >= 1; $i--) {
+    $str .= $i;
+};
+echo $str, "\n";
+echo "\n";
+for ($i = 1, $str = '-'; $i < 10; $i++) {
+    $str .= $i . "-";
+};
+echo $str, "\n";
+echo "\n";
+for ($i = 'x', $a = 1; $a <= 20; $i .= 'x', $a++) {
+    echo $i, "\n";
+};
+echo "\n";
+for ($i = 'xx', $a = 1; $a <= 5; $i .= 'xx', $a++) {
+    echo $i, "\n";
+};
+echo "\n";
+//доп задачи
+echo "доп задачи";
+echo "\n";
+$array = [2, 5, 9, 15, 0, 4];
+foreach ($array as $value) {
+    if (($value > 3) and ($value < 10)) {
+        echo $value, "\n";
+    }
+}
+echo "\n";
+$array = [1, 2, 3, -3, -2, -1];
+$summ = 0;
+foreach ($array as $value) {
+    if ($value > 0) {
+        $summ += $value;
+    }
+}
+echo $summ;
+echo "\n";
+echo "\n";
+$array = [1, 2, 5, 9, 4, 13, 4, 10];
+foreach ($array as $value) {
+    if ($value == 4) {
+        echo 'есть!';
+        break;
+    }
+}
+echo "\n";
+echo "\n";
+$array = ['10', '20', '30', '50', '235', '3000'];
+foreach ($array as $value) {
+    if (($value[0] == '1') or ($value[0] == '2') or ($value[0] == '5')) {
+        echo $value, "\n";
+    }
+}
+echo "\n";
+echo "\n";
+$array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+foreach ($array as $value) {
+    echo '-' . $value;
+    if ($value == end($array)){
+        echo '-';
+    }
+}
+echo "\n";
+echo "\n";
+$array = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+foreach ($array as $key => $value) {
+    if (($key == 5) or ($key == 6)){
+        echo $value . ' жирный', "\n";
+    } else {
+        echo $value, "\n";
+    }
+}
+echo "\n";
+echo "\n";
+$day = 2;
+foreach ($array as $key => $value) {
+    if (($key == $day)){
+        echo $value . ' курсивный', "\n";
+    } else {
+        echo $value, "\n";
+    }
+}
+echo "\n";
+echo "\n";
+for ($array = [], $i = 1; $i <= 100; $i++) {
+    $array[] = $i;
+}
+var_dump($array);
+echo "\n";
+echo "\n";
+$arr = ['green'=>'зеленый', 'red'=>'красный', 'blue'=>'голубой'];
+foreach ($arr as $key => $value) {
+    $en[] = $key;
+    $ru[] = $value;
+}
+var_dump($en);
+var_dump($ru);
+echo "\n";
+echo "\n";
+$num = 1000;
+$i = 0;
+while ($num >= 50) {
+    $num /= 2;
+    $i++;
+}
+echo $num, "\n";
+echo $i . ' операций';
+echo "\n";
+echo "\n";
+for ($i=0, $num = 1000; $num >= 50 ; $i++, $num /= 2) { 
+
+}
+echo $num, "\n";
+echo $i . ' операций';
+echo "\n";
+echo "\n";
+$array = [1, 2, 3, 4, 5, 6, 7, 8];
+$summ = 0;
+$i = 0;
+foreach ($array as $key => $value) {
+   $summ += $value;
+   $i++;
+   if ($summ == 10) {
+        echo $summ, "\n";
+        echo $i . ' операции';
+   }
+}

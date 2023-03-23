@@ -451,11 +451,16 @@ echo "\n";
 $array = [1, 2, 3, 4, 5, 6, 7, 8];
 $summ = 0;
 $i = 0;
-foreach ($array as $key => $value) {
-   $summ += $value;
-   $i++;
-   if ($summ == 10) {
-        echo $summ, "\n";
-        echo $i . ' операции';
-   }
+// foreach ($array as $key => $value) {
+//    while ($summ <= 10) {
+//         $summ += $value;
+//         $i++;
+//         //continue;
+//    }
+// }
+while ($summ <= 10) {
+    $summ += $array[$i];
+    $i++;
 }
+echo $summ, "\n";
+echo $i . ' итераций';
